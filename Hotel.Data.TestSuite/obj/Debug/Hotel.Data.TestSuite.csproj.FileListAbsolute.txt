@@ -1,0 +1,15 @@
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Hotel.Data.TestSuite\obj\Debug\Hotel.Data.TestSuite.csprojResolveAssemblyReference.cache
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Hotel.Data.TestSuite\bin\Debug\Hotel.Data.TestSuite.dll.config
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Hotel.Data.TestSuite\bin\Debug\Hotel.Data.TestSuite.dll
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Hotel.Data.TestSuite\bin\Debug\Hotel.Data.TestSuite.pdb
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Hotel.Data.TestSuite\bin\Debug\HotelOperation.Data.dll
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Hotel.Data.TestSuite\bin\Debug\HotelReservation.Entity.dll
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Hotel.Data.TestSuite\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Hotel.Data.TestSuite\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Hotel.Data.TestSuite\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Hotel.Data.TestSuite\bin\Debug\HotelOperation.Data.pdb
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Hotel.Data.TestSuite\bin\Debug\HotelReservation.Entity.pdb
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Hotel.Data.TestSuite\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Hotel.Data.TestSuite\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Hotel.Data.TestSuite\obj\Debug\Hotel.Data.TestSuite.dll
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Hotel.Data.TestSuite\obj\Debug\Hotel.Data.TestSuite.pdb
