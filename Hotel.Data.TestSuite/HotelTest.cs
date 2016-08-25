@@ -11,7 +11,7 @@ namespace Hotel.Data.TestSuite
         public void TestHotelInsert()
         {
             HotelDBImpl hotelDBImpl = new HotelDBImpl();
-            bool result = hotelDBImpl.InsertCustomer("Hyatt", "hyatt.com", "0123456789", "Pune", "100");
+            bool result = hotelDBImpl.InsertHotel("Hyatt", "hyatt.com", "0123456789", "Pune", "100");
             Assert.AreEqual(true, result);
         }
 
@@ -28,7 +28,7 @@ namespace Hotel.Data.TestSuite
         public void TestHotelDelete()
         {
             HotelDBImpl hotelDBImpl = new HotelDBImpl();
-            bool result = hotelDBImpl.DeleteCustomer(1);
+            bool result = hotelDBImpl.DeleteHotel(1);
             Assert.AreEqual(true, result);
         }
 
