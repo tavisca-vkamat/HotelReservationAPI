@@ -1,0 +1,11 @@
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Customer.Data\bin\Debug\Customer.Data.dll
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Customer.Data\bin\Debug\Customer.Data.pdb
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Customer.Data\bin\Debug\HotelReservation.Entity.dll
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Customer.Data\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Customer.Data\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Customer.Data\bin\Debug\HotelReservation.Entity.pdb
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Customer.Data\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Customer.Data\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Customer.Data\obj\Debug\CustomerOperation.Data.csprojResolveAssemblyReference.cache
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Customer.Data\obj\Debug\Customer.Data.dll
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Customer.Data\obj\Debug\Customer.Data.pdb
