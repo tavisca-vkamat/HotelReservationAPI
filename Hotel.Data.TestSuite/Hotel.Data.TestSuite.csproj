@@ -50,8 +50,21 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="HotelTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HotelOperation.Data\HotelOperation.Data.csproj">
+      <Project>{e4c06646-13dc-416c-b80d-96b4d44cbda7}</Project>
+      <Name>HotelOperation.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HotelReservation.Entity\HotelReservation.Entity.csproj">
+      <Project>{65d789ac-8774-486d-9cbb-d6b4d38834f2}</Project>
+      <Name>HotelReservation.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

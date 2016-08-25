@@ -13,7 +13,7 @@ namespace HotelOperation.Data
     public class HotelDBImpl
     {
         private const string DBName = "HotelReservationSystem";
-        public bool InsertCustomer(string hotelName,  string emailId, string phoneNumber, string city, string totalRooms)
+        public bool InsertHotel(string hotelName,  string emailId, string phoneNumber, string city, string totalRooms)
         {
             DatabaseProviderFactory dbPFactory = new DatabaseProviderFactory();
             Database defaultDb = dbPFactory.CreateDefault();
