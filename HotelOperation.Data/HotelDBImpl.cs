@@ -46,13 +46,13 @@ namespace HotelOperation.Data
             return TranslateHotel.PaserHotel(dataset);
         }
 
-        public bool DeleteCustomer(int id)
+        public bool DeleteHotel(int id)
         {
             DatabaseProviderFactory dbPFactory = new DatabaseProviderFactory();
             Database defaultDb = dbPFactory.CreateDefault();
             Database database = dbPFactory.Create(DBName);
-            DbCommand dbcommand = database.GetStoredProcCommand("spDeleteCustomer");
-            database.AddInParameter(dbcommand, "CustomerId", System.Data.DbType.Int32, id);
+            DbCommand dbcommand = database.GetStoredProcCommand("spDeleteHotel");
+            database.AddInParameter(dbcommand, "HotelId", System.Data.DbType.Int32, id);
 
             int rowsAffected = database.ExecuteNonQuery(dbcommand);
 
