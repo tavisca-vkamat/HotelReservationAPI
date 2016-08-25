@@ -20,13 +20,13 @@ namespace HotelReservationSystem
             HotelDBImpl hotelDBImpl = new HotelDBImpl();
             do
             {
-                Console.Write("\n\n-------------MENU-------------\n1.Add customer\n2.Add hotel\n3.Add rooms to hotel\n4.Search hotel\n5.Book hotel\n6.Exit\n");
+                Console.Write("\n\n-------------MENU-------------\n1.Add customer\n2.Add hotel\n3.Add rooms to hotel\n4.Search hotel\n5.Book room\n6.Check out room\n7.Exit\n");
                 choice = int.Parse(Console.ReadLine());
 
                 switch (choice)
                 {
                     case 1:
-                       /*add customer */
+                        /*add customer */
                         Console.Write("Enter customers's first name: ");
                         string customerFirstName = Console.ReadLine();
 
@@ -38,14 +38,14 @@ namespace HotelReservationSystem
 
                         Console.Write("Enter customers's phone number: ");
                         string customerPhoneNumber = Console.ReadLine();
-                        bool result = customerDBImpl.InsertCustomer(customerFirstName,customerLastName,customerEmailId,customerPhoneNumber);
+                        bool result = customerDBImpl.InsertCustomer(customerFirstName, customerLastName, customerEmailId, customerPhoneNumber);
                         if (result)
                             Console.WriteLine("Insertion successful");
                         else
                             Console.WriteLine("Error !!");
                         break;
                     case 2:
-                       /* add hotel */
+                        /* add hotel */
                         Console.Write("Enter hotel's name: ");
                         string hotelName = Console.ReadLine();
 
@@ -61,7 +61,7 @@ namespace HotelReservationSystem
                         Console.Write("Enter hotel's total number of rooms in hotel: ");
                         string hotelTotalrooms = Console.ReadLine();
 
-                        result = hotelDBImpl.InsertHotel(hotelName,hotelEmailId,hotelPhoneNumber,city,hotelTotalrooms);
+                        result = hotelDBImpl.InsertHotel(hotelName, hotelEmailId, hotelPhoneNumber, city, hotelTotalrooms);
                         if (result)
                             Console.WriteLine("Insertion successful");
                         else
@@ -71,7 +71,7 @@ namespace HotelReservationSystem
                         /* add rooms data */
                         Console.Write("Enter hotel's ID: ");
                         int hotelId = int.Parse(Console.ReadLine());
-                        
+
                         Console.Write("Enter room type: ");
                         string roomType = Console.ReadLine();
 
@@ -81,13 +81,14 @@ namespace HotelReservationSystem
                         Console.Write("Enter available rooms: ");
                         int availableRooms = int.Parse(Console.ReadLine());
 
-                        result = RoomsDbImpl.InsertRoomData(hotelId,roomType,totalRooms,availableRooms);
+                        result = RoomsDbImpl.InsertRoomData(hotelId, roomType, totalRooms, availableRooms);
                         if (result)
                             Console.WriteLine("Insertion successful");
                         else
                             Console.WriteLine("Error !!");
                         break;
                     case 4:
+                        /* select rooms */
                         ArrayList arrOfRooms = null;
                         Console.WriteLine("1.AC \n2.Non-AC");
                         int choiceOfRoom = int.Parse(Console.ReadLine());
@@ -107,13 +108,40 @@ namespace HotelReservationSystem
                         {
                             break;
                         }
-                        Console.WriteLine("Hotel ID: " + " Room Type " + " Available Rooms " + "  Total Rooms ");
+                        Console.WriteLine("Room Id :" + "Hotel ID: " + " Room Type " + " Available Rooms " + "  Total Rooms ");
                         foreach (RoomsData roomdata in arrOfRooms)
                         {
-                            Console.WriteLine(roomdata.hotelId+"\t    "+roomdata.roomType+"\t  "+roomdata.availableRooms+"\t\t "+roomdata.totalRooms);
+                            Console.WriteLine(roomdata.id + "\t" + roomdata.hotelId + "\t    " + roomdata.roomType + "\t  " + roomdata.availableRooms + "\t\t " + roomdata.totalRooms);
                         }
                         break;
                     case 5:
+                        /* book room */
+                        Console.WriteLine("\nEnter hotel ID");
+                        int roomID = int.Parse(Console.ReadLine());
+
+                        Console.WriteLine("\nEnter customer ID");
+                        int customerId = int.Parse(Console.ReadLine());
+
+                        result = RoomsDbImpl.BookRoom(roomID, customerId);
+                        if (result)
+                            Console.WriteLine("\nRoom booked\n");
+                        else
+                            Console.WriteLine("\nRoom not available\n");
+
+                        break;
+                    case 6:
+                        /* check out room */
+                        Console.WriteLine("\nEnter hotel ID");
+                        roomID = int.Parse(Console.ReadLine());
+
+                        Console.WriteLine("\nEnter customer ID");
+                        customerId = int.Parse(Console.ReadLine());
+
+                        result = RoomsDbImpl.CheckOutRoom(roomID, customerId);
+                        if (result)
+                            Console.WriteLine("\nSuccessful checked out\n");
+                        else
+                            Console.WriteLine("\nSOme problem\n");
 
                         break;
                     default:
@@ -122,7 +150,7 @@ namespace HotelReservationSystem
 
                 }
             }
-            while (choice != 6);
+            while (choice != 7);
         }
     }
 }
