@@ -46,5 +46,40 @@ namespace RoomsOperation.Data
 
             return TranslateRoomsData.ConvertDataSetToArrayList(dataset);
         }
+        public static bool BookRoom(int roomId, int customerId)
+        {
+            DatabaseProviderFactory dbPFactory = new DatabaseProviderFactory();
+            Database defaultDb = dbPFactory.CreateDefault();
+            Database database = dbPFactory.Create(DBName);
+            DbCommand dbcommand = database.GetStoredProcCommand("spUpdateBookRoomData");
+            database.AddInParameter(dbcommand, "roomId", System.Data.DbType.Int32, roomId);
+            database.AddInParameter(dbcommand, "customerId", System.Data.DbType.Int32, customerId);
+
+            int rowsAffected = database.ExecuteNonQuery(dbcommand);
+
+            if (rowsAffected == -1)
+                return true;
+            else
+                return false;
+
+        }
+
+        public static bool CheckOutRoom(int roomId, int customerId)
+        {
+            DatabaseProviderFactory dbPFactory = new DatabaseProviderFactory();
+            Database defaultDb = dbPFactory.CreateDefault();
+            Database database = dbPFactory.Create(DBName);
+            DbCommand dbcommand = database.GetStoredProcCommand("spUpdateCheckOutRoomData");
+            database.AddInParameter(dbcommand, "roomId", System.Data.DbType.Int32, roomId);
+            database.AddInParameter(dbcommand, "customerId", System.Data.DbType.Int32, customerId);
+
+            int rowsAffected = database.ExecuteNonQuery(dbcommand);
+
+            if (rowsAffected == -1)
+                return true;
+            else
+                return false;
+
+        }
     }
 }
