@@ -12,7 +12,8 @@ namespace Customer.Data.TestSuite
         public void TestCustomerInsert()
         {
             CustomerDBImpl customerDBImpl = new CustomerDBImpl();
-            customerDBImpl.InsertCustomer("vivek","kamat","vkamat@tavisca.com","8975025201");
+            bool result =  customerDBImpl.InsertCustomer("xyz","pqr","xyz@tavisca.com","1234567890");
+            Assert.AreEqual(true, result);
         }
 
         [TestMethod]
@@ -22,6 +23,15 @@ namespace Customer.Data.TestSuite
             HotelReservation.Entity.Customer customer = customerDBImpl.SelectCustomer(1);
             Assert.AreEqual(customer.firstName,"vivek");
             
+        }
+        
+        [TestMethod]
+        public void TestCustomerDelete()
+        {
+            CustomerDBImpl customerDBImpl = new CustomerDBImpl();
+            bool result = customerDBImpl.DeleteCustomer(6);
+            Assert.AreEqual(true, result);
+
         }
     }
 }
