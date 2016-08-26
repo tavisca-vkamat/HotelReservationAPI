@@ -116,7 +116,7 @@ namespace HotelReservationSystem
                         break;
                     case 5:
                         /* book room */
-                        Console.WriteLine("\nEnter hotel ID");
+                        Console.WriteLine("\nEnter room ID");
                         int roomID = int.Parse(Console.ReadLine());
 
                         Console.WriteLine("\nEnter customer ID");
@@ -131,18 +131,18 @@ namespace HotelReservationSystem
                         break;
                     case 6:
                         /* check out room */
-                        Console.WriteLine("\nEnter hotel ID");
-                        roomID = int.Parse(Console.ReadLine());
+                        Console.WriteLine("\nEnter booking ID");
+                        int bookingId = int.Parse(Console.ReadLine());
 
-                        Console.WriteLine("\nEnter customer ID");
-                        customerId = int.Parse(Console.ReadLine());
-
-                        result = RoomsDbImpl.CheckOutRoom(roomID, customerId);
+                        result = RoomsDbImpl.CheckOutRoom(bookingId);
                         if (result)
                             Console.WriteLine("\nSuccessful checked out\n");
                         else
                             Console.WriteLine("\nSOme problem\n");
 
+                        break;
+                    case 7:
+                        Console.WriteLine("Thank you!!");
                         break;
                     default:
                         Console.WriteLine("Invalid choice!!");

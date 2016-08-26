@@ -21,6 +21,7 @@ namespace RoomsOperation.Data
                 foreach (DataRow dr in dataset.Tables[0].Rows)
                 {
                     RoomsData roomsdata = new RoomsData();
+                    roomsdata.id = Convert.ToInt32(dr["Id"]);
                     roomsdata.hotelId = Convert.ToInt32(dr["HotelId"]);
                     roomsdata.roomType = dr["RoomType"].ToString();
                     roomsdata.totalRooms = Convert.ToInt32(dr["TotalRooms"]);
