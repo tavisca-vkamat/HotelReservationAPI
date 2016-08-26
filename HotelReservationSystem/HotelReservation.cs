@@ -142,7 +142,7 @@ namespace HotelReservationSystem
 
                         break;
                     case 7:
-                        Console.WriteLine("Thank you!!");
+                        Console.WriteLine("Thank you !!");
                         break;
                     default:
                         Console.WriteLine("Invalid choice!!");
