@@ -1,5 +1,4 @@
 C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\HotelReservation.Entity\bin\Debug\HotelReservation.Entity.dll
 C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\HotelReservation.Entity\bin\Debug\HotelReservation.Entity.pdb
-C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\HotelReservation.Entity\obj\Debug\HotelReservation.Entity.csprojResolveAssemblyReference.cache
 C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\HotelReservation.Entity\obj\Debug\HotelReservation.Entity.dll
 C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\HotelReservation.Entity\obj\Debug\HotelReservation.Entity.pdb

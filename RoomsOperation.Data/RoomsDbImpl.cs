@@ -14,7 +14,7 @@ namespace RoomsOperation.Data
     public class RoomsDbImpl
     {
         private const string DBName = "HotelReservationSystem";
-        public static bool InsertRoomData(int hotelId,string roomType,int totalRooms, int availableRooms)
+        public static Int32 InsertRoomData(int hotelId,string roomType,int totalRooms, int availableRooms, int price)
         {
             DatabaseProviderFactory dbPFactory = new DatabaseProviderFactory();
             Database defaultDb = dbPFactory.CreateDefault();
@@ -24,28 +24,35 @@ namespace RoomsOperation.Data
             database.AddInParameter(dbcommand, "RoomType", System.Data.DbType.String, roomType);
             database.AddInParameter(dbcommand, "TotalRooms", System.Data.DbType.Int32, totalRooms);
             database.AddInParameter(dbcommand, "AvailableRooms", System.Data.DbType.Int32, availableRooms);
-            
+            database.AddInParameter(dbcommand, "Price", System.Data.DbType.Int32, price);
+
+           
+            database.AddOutParameter(dbcommand, "roomID", System.Data.DbType.Int32, Int32.MaxValue);
 
             int rowsAffected = database.ExecuteNonQuery(dbcommand);
 
+            int roomId = int.Parse(string.Format("{0}", database.GetParameterValue(dbcommand, "roomID")));
+            
+
             if (rowsAffected == -1)
-                return true;
+                return roomId;
             else
-                return false;
+                return -1;
         }
 
-        public static ArrayList SelectRoomData(string roomType)
+        public static ArrayList SelectRoomData(int hotelId)
         {
             DatabaseProviderFactory dbPFactory = new DatabaseProviderFactory();
             Database defaultDb = dbPFactory.CreateDefault();
             Database database = dbPFactory.Create(DBName);
             DbCommand dbcommand = database.GetStoredProcCommand("spSelectRoomData");
-            database.AddInParameter(dbcommand, "RoomType", System.Data.DbType.String, roomType);
+            database.AddInParameter(dbcommand, "hotelId", System.Data.DbType.Int32, hotelId);
 
             DataSet dataset = database.ExecuteDataSet(dbcommand);
 
             return TranslateRoomsData.ConvertDataSetToArrayList(dataset);
         }
+
         public static bool BookRoom(int roomId, int customerId)
         {
             DatabaseProviderFactory dbPFactory = new DatabaseProviderFactory();
@@ -62,7 +69,7 @@ namespace RoomsOperation.Data
             
             if (rowsAffected == -1)
             {
-                Console.WriteLine("Booking ID : "+bookingId);
+                Console.WriteLine("\nBooking ID : "+bookingId);
                 return true;
             }
             
