@@ -17,5 +17,7 @@ namespace HotelReservation.Entity
         public int totalRooms{get; set;}
 
         public int availableRooms { get; set; }
+
+        public string rentOfRoom { get; set; }
     }
 }

@@ -26,7 +26,7 @@ namespace RoomsOperation.Data
                     roomsdata.roomType = dr["RoomType"].ToString();
                     roomsdata.totalRooms = Convert.ToInt32(dr["TotalRooms"]);
                     roomsdata.availableRooms = Convert.ToInt32(dr["AvailableRooms"]);
-
+                    roomsdata.rentOfRoom = dr["Price"].ToString();
                     roomDataArray.Add(roomsdata);
                 }
                 return roomDataArray;
