@@ -1,15 +1,1 @@
-C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Customer.Data.TestSuite\bin\Debug\Customer.Data.TestSuite.dll
-C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Customer.Data.TestSuite\bin\Debug\Customer.Data.TestSuite.pdb
-C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Customer.Data.TestSuite\bin\Debug\Customer.Data.dll
-C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Customer.Data.TestSuite\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
-C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Customer.Data.TestSuite\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
-C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Customer.Data.TestSuite\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
-C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Customer.Data.TestSuite\bin\Debug\Customer.Data.pdb
-C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Customer.Data.TestSuite\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
-C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Customer.Data.TestSuite\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
 C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Customer.Data.TestSuite\obj\Debug\Customer.Data.TestSuite.csprojResolveAssemblyReference.cache
-C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Customer.Data.TestSuite\obj\Debug\Customer.Data.TestSuite.dll
-C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Customer.Data.TestSuite\obj\Debug\Customer.Data.TestSuite.pdb
-C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Customer.Data.TestSuite\bin\Debug\Customer.Data.TestSuite.dll.config
-C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Customer.Data.TestSuite\bin\Debug\HotelReservation.Entity.dll
-C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\Customer.Data.TestSuite\bin\Debug\HotelReservation.Entity.pdb
