@@ -52,33 +52,37 @@ namespace RoomsOperation.Data
             Database defaultDb = dbPFactory.CreateDefault();
             Database database = dbPFactory.Create(DBName);
             DbCommand dbcommand = database.GetStoredProcCommand("spUpdateBookRoomData");
-            database.AddInParameter(dbcommand, "roomId", System.Data.DbType.Int32, roomId);
-            database.AddInParameter(dbcommand, "customerId", System.Data.DbType.Int32, customerId);
+            database.AddInParameter(dbcommand, "Idroom", System.Data.DbType.Int32, roomId);
+            database.AddInParameter(dbcommand, "CustomerId", System.Data.DbType.Int32, customerId);
+            database.AddOutParameter(dbcommand, "bookingId",System.Data.DbType.Int32,Int32.MaxValue);
 
             int rowsAffected = database.ExecuteNonQuery(dbcommand);
 
+            int bookingId = int.Parse(string.Format("{0}", database.GetParameterValue(dbcommand, "bookingId")));
+            
             if (rowsAffected == -1)
+            {
+                Console.WriteLine("Booking ID : "+bookingId);
                 return true;
+            }
+            
             else
                 return false;
 
         }
 
-        public static bool CheckOutRoom(int roomId, int customerId)
+        public static bool CheckOutRoom(int bookingId)
         {
             DatabaseProviderFactory dbPFactory = new DatabaseProviderFactory();
             Database defaultDb = dbPFactory.CreateDefault();
             Database database = dbPFactory.Create(DBName);
             DbCommand dbcommand = database.GetStoredProcCommand("spUpdateCheckOutRoomData");
-            database.AddInParameter(dbcommand, "roomId", System.Data.DbType.Int32, roomId);
-            database.AddInParameter(dbcommand, "customerId", System.Data.DbType.Int32, customerId);
+            
+            database.AddInParameter(dbcommand, "bookingId", System.Data.DbType.Int32, bookingId);
 
-            int rowsAffected = database.ExecuteNonQuery(dbcommand);
+            database.ExecuteScalar(dbcommand);
 
-            if (rowsAffected == -1)
-                return true;
-            else
-                return false;
+            return true;
 
         }
     }
