@@ -16,3 +16,8 @@ C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\HotelR
 C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\HotelReservationSystem\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
 C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\HotelReservationSystem\obj\Debug\HotelReservationSystem.exe
 C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\HotelReservationSystem\obj\Debug\HotelReservationSystem.pdb
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\HotelReservationSystem\bin\Debug\FileLogManager.dll
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\HotelReservationSystem\bin\Debug\FileLogManager.pdb
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\HotelReservationSystem\bin\Debug\NLog.config
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\HotelReservationSystem\bin\Debug\NLog.dll
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\HotelReservationSystem\bin\Debug\NLog.xml

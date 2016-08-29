@@ -1,0 +1,2 @@
+2016-08-29 13:29:08.3470|INFO|HotelReservationSystem.LoggerExample|8/29/2016 1:29:00 PM city name :pune search by customer ID :7 booking ID:21
+2016-08-29 13:29:46.2818|INFO|HotelReservationSystem.LoggerExample|8/29/2016 1:29:40 PM city name :mumbai search by customer ID :1 booking ID:22

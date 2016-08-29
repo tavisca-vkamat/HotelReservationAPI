@@ -19,8 +19,8 @@ namespace Customer.Data.TestSuite
         [TestMethod]
         public void TestCustomerInsert()
         {
-            bool result =  customerDBImpl.InsertCustomer("xyzzzzz","pqr","xyz@tavisca.com","1234567890");
-            Assert.AreEqual(true, result);
+            int result =  customerDBImpl.InsertCustomer("xyzzzzz","pqr","xyz@tavisca.com","1234567890");
+            Assert.AreEqual(1, result);
         }
 
         [TestMethod]

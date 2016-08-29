@@ -1,0 +1,6 @@
+2016-08-29 14:18:33.8246|WARN|applicationLogs|System.ApplicationException: City has no hotel entry 
+   at HotelReservationSystem.HotelReservationSystem.Main(String[] args) in C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\HotelReservationSystem\HotelReservationSystem.cs:line 53
+2016-08-29 14:18:33.8736|ERROR|applicationLogs|delhi
+2016-08-29 14:19:13.4236|WARN|applicationLogs|System.ApplicationException: City has no hotel entry 
+   at HotelReservationSystem.HotelReservationSystem.Main(String[] args) in C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\HotelReservationSystem\HotelReservationSystem.cs:line 53
+2016-08-29 14:19:13.4316|ERROR|applicationLogs|tgbm

@@ -53,7 +53,7 @@ namespace RoomsOperation.Data
             return TranslateRoomsData.ConvertDataSetToArrayList(dataset);
         }
 
-        public static bool BookRoom(int roomId, int customerId)
+        public static int BookRoom(int roomId, int customerId)
         {
             DatabaseProviderFactory dbPFactory = new DatabaseProviderFactory();
             Database defaultDb = dbPFactory.CreateDefault();
@@ -70,11 +70,11 @@ namespace RoomsOperation.Data
             if (rowsAffected == -1)
             {
                 Console.WriteLine("\nBooking ID : "+bookingId);
-                return true;
+                return bookingId;
             }
             
             else
-                return false;
+                return -1;
 
         }
 

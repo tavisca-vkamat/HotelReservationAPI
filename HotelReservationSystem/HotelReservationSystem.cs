@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FileLogManager;
 
 namespace HotelReservationSystem
 {
@@ -32,18 +33,33 @@ namespace HotelReservationSystem
                         /* book room customer */
                         if (choiceOfUser == 1)
                         {
+                           
                             /* search hotel by city name */
                             ArrayList arrOfHotels = null;
                             Console.Write("Enter city to search hotel: ");
                             string cityName = Console.ReadLine().ToLower();
+                            LogEntry logentry = new LogEntry();
+                            logentry.entryTime = DateTime.Now;
+                            logentry.logMessage = "city name :" + cityName;
+                           
 
                             arrOfHotels = HotelDBImpl.SearchHotelByCityName(cityName);
-
+                            /* if entered city has no hotel enrty in database */
                             if (arrOfHotels.Count == 0)
                             {
+                                try
+                                {
+                                    throw new ApplicationException("City has no hotel entry ");
+                                }
+                                catch(ApplicationException expection)
+                                {
+                                    LoggerExample.loggerForApplication.Error(cityName , expection);
+                                    LoggerExample.loggerForApplication.Warn(expection);
+                                }
                                 Console.WriteLine("No rooms in this city.");
                                 break;
                             }
+
                             Console.WriteLine("\nHotel ID " + " Hotel Name");
                             Console.WriteLine("-----------------------------");
                             foreach (Hotel hotel in arrOfHotels)
@@ -59,7 +75,7 @@ namespace HotelReservationSystem
                             int flagForHotelCheck = 0;
                             foreach (Hotel hotel in arrOfHotels)
                             {
-                                if (hotel.city.CompareTo(cityName) == 0)
+                                if (hotel.city.ToLower().CompareTo(cityName) == 0)
                                 {
                                     if (hotel.hotelId == hotelId)
                                     {
@@ -102,9 +118,14 @@ namespace HotelReservationSystem
                                 Console.Write("Enter customer ID : ");
                                 int customerId = int.Parse(Console.ReadLine());
 
-                                result = RoomsDbImpl.BookRoom(roomId, customerId);
-                                if (result)
+                                logentry.logMessage += " search by customer ID :" + customerId.ToString();
+                                //WriteToFile.searchHotelByCustomer(logentry);
+                               
+
+                                int bookingID = RoomsDbImpl.BookRoom(roomId, customerId);
+                                if (bookingID != -1)
                                 {
+                                    LoggerExample.BookRoomLogs(logentry,bookingID);
                                     Console.WriteLine("\nRoom booked\n");
                                     Console.WriteLine("===========================================================");
                                 }
@@ -127,9 +148,15 @@ namespace HotelReservationSystem
 
                                 int custID = customerDBImpl.InsertCustomer(customerFirstName, customerLastName, customerEmailId, customerPhoneNumber);
 
-                                result = RoomsDbImpl.BookRoom(roomId, custID);
-                                if (result)
+                                logentry.logMessage += " search by customer ID :" + custID.ToString();
+                                //WriteToFile.searchHotelByCustomer(logentry);
+
+                                int bookingId = RoomsDbImpl.BookRoom(roomId, custID);
+                                if (bookingId != -1)
+                                {
+                                    LoggerExample.BookRoomLogs(logentry, bookingId);
                                     Console.WriteLine("\nRoom booked\n");
+                                }
                                 else
                                     Console.WriteLine("\nRoom not available\n");
                             }
