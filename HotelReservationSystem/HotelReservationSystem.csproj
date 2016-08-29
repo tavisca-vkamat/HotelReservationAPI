@@ -57,6 +57,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
     </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.3.7\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -68,15 +72,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HotelReservationSystem.cs" />
+    <Compile Include="LoggerExample.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Customer.Data\CustomerOperation.Data.csproj">
       <Project>{b908d908-754f-4e7f-b6a2-afbb4ce8f98b}</Project>
       <Name>CustomerOperation.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FileLogManager\FileLogManager.csproj">
+      <Project>{3EBA2F1F-9894-4B13-BBD1-D75A53F4BB01}</Project>
+      <Name>FileLogManager</Name>
     </ProjectReference>
     <ProjectReference Include="..\HotelOperation.Data\HotelOperation.Data.csproj">
       <Project>{e4c06646-13dc-416c-b80d-96b4d44cbda7}</Project>
@@ -102,6 +118,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="LogFiles\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

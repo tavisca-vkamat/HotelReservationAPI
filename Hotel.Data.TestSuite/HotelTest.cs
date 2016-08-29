@@ -11,8 +11,8 @@ namespace Hotel.Data.TestSuite
         public void TestHotelInsert()
         {
             HotelDBImpl hotelDBImpl = new HotelDBImpl();
-            bool result = hotelDBImpl.InsertHotel("Hyatt", "hyatt.com", "0123456789", "Pune", "100");
-            Assert.AreEqual(true, result);
+            int result = hotelDBImpl.InsertHotel("Hyatt", "hyatt.com", "0123456789", "Pune", "100");
+            Assert.AreEqual(-1, result);
         }
 
         [TestMethod]

@@ -1,0 +1,5 @@
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\FileLogManager\bin\Debug\FileLogManager.dll
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\FileLogManager\bin\Debug\FileLogManager.pdb
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\FileLogManager\obj\Debug\FileLogManager.csprojResolveAssemblyReference.cache
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\FileLogManager\obj\Debug\FileLogManager.dll
+C:\Users\vkamat\Documents\Visual Studio 2015\Projects\HotelReservationAPI\FileLogManager\obj\Debug\FileLogManager.pdb

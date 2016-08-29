@@ -1,0 +1,1 @@
+2016-08-29 13:35:35.2147|INFO|HotelReservationSystem.LoggerExample|8/29/2016 1:35:30 PM city name :pune search by customer ID :1 booking ID:23
